@@ -64,7 +64,7 @@ public class LDECircular<T extends Comparable<T>> {
         }
     }
 
-    public LDENode<T> busca(T valor) { // busca sequencial melhorada
+    public LDENode<T> busca(T valor) {
         LDENode<T> aux;
         if (this.isEmpty() == true) {
             return null;
@@ -75,7 +75,7 @@ public class LDECircular<T extends Comparable<T>> {
         } else {
             aux = this.prim;
             while (aux.getProx() != null) {
-                if (aux.getInfo().compareTo(valor) == 0) { // achei
+                if (aux.getInfo().compareTo(valor) == 0) { 
                     return aux;
                 } else if (valor.compareTo(aux.getInfo()) > 0) {
                     aux = aux.getProx();
@@ -119,21 +119,10 @@ public class LDECircular<T extends Comparable<T>> {
         }
     }
 
-    public void exibirInfo(T valor) {
-        LDENode<T> resultadoBusca = this.busca(valor);
-
-        if (resultadoBusca != null) {
-            System.out.println(resultadoBusca.getInfo());
-        } else {
-            System.out.println("Matrícula não encontrada");
-        }
-
-    }
-
-    public void exibirInfoTodos() {
+    public void exibir() {
         LDENode<T> aux = this.prim;
         if (this.isEmpty()) {
-            System.out.println("lista vazia@");
+            System.out.println("lista vazia");
         } else if (this.qtd == 1) {
             System.out.println(aux.getInfo());
         } else {

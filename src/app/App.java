@@ -26,7 +26,7 @@ public class App {
                 turmaEscolhida = turma4;
             }
 
-            ITurma();
+            menu();
             escolhaOpcao = in.nextInt(); in.nextLine();
            
             
@@ -54,7 +54,7 @@ public class App {
                 System.out.println("Digite a matrícula do aluno: ");
                 String matricula = in.nextLine();
 
-                turmaEscolhida.exibir(matricula);
+                turmaEscolhida.exibirAluno(matricula);
             } else if (escolhaOpcao == 6) {
                 System.out.println("Digite a matrícula do aluno: ");
                 String matricula = in.nextLine();
@@ -67,13 +67,15 @@ public class App {
     }
 
     public static void exibirOpcoes() {
+        System.out.println("******Bem vindo(a) a cardeneta das turmas de Maria******");
+        
         System.out.println("1 -  Operações da turma 1");
         System.out.println("2 -  Operações da turma 2");
         System.out.println("3 -  Operações da turma 3");
         System.out.println("4 -  Operações da turma 4");
     }
 
-    public static void ITurma(){
+    public static void menu(){
         System.out.println("1 - Inserir aluno");
         System.out.println("2 - Listar turma");
         System.out.println("3 - Alterar a média final de um aluno");
