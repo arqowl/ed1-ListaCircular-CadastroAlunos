@@ -68,13 +68,10 @@ public class Cadastro {
                         System.out.println("Informe a quantidade de faltas a serem abonadas: ");
                         faltas = in.nextDouble(); in.nextLine();
                         novasFaltas -= faltas;
-                        if(novasFaltas>=0){
-                            procurado.setMediaFinal(novasFaltas);
-                            chave = 0;
-                        }else{
-                            System.out.println("Um aluno não deveria ter uma quantidade de faltas negativas");
-                            System.out.println("Tente novamente.");
-                        }
+                        procurado.setMediaFinal(novasFaltas);
+                        chave = 0;
+                        break;
+                    case 0: System.out.println("Boa noite!!!");
                         break;
                     default:
                         break;

@@ -5,83 +5,230 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int escolhaTurma, escolhaOpcao;
+        int chaveMenu=0, chaveTurma;
+        String matricula;
         Cadastro turma1 = new Cadastro();
         Cadastro turma2 = new Cadastro();
         Cadastro turma3 = new Cadastro();
         Cadastro turma4 = new Cadastro();
-        Cadastro turmaEscolhida = null;
 
         do {
             exibirOpcoes();
-            escolhaTurma = in.nextInt(); in.nextLine();
+            chaveTurma = in.nextInt(); in.nextLine();
+            switch(chaveTurma) {
+                case 1: 
+                menuOpcoes();
+                chaveMenu = in.nextInt(); in.nextLine();
+                switch(chaveMenu) {
+                    case 1:
+                            System.out.println("Digite o nome do aluno: ");
+                            String nome = in.next(); in.nextLine();
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.next(); in.nextLine();
+                            Aluno alunoInserir = new Aluno(matricula, nome);
+                            turma1.cadastrar(alunoInserir);
+                            break;
+                    case 2: 
+                            turma1.listar();
+                            break;
+                    case 3:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+                            turma1.alterarMediaFinal(matricula);
+                        break;
+                    case 4:
+                            System.out.println("Digite a matrícula: ");
+                            matricula = in.nextLine();
+                            turma1.alterarFaltas(matricula);
+                        break;
+                    case 5:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+                            turma1.exibirAluno(matricula);
+                        break;
+                    case 6:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+                            turma1.removerAluno(matricula);
+                        break;
+    
+                    case 0: System.out.println("Boa noite!!!");
+                            break;
+                    default: System.out.println("Opção inválida!!");
+    
+                }
+    
+                        break;
+                case 2: 
+                menuOpcoes();
+                chaveMenu = in.nextInt(); in.nextLine();
+                switch(chaveMenu) {
+                    case 1:
+                            System.out.println("Digite o nome do aluno: ");
+                            String nome = in.next(); in.nextLine();
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.next(); in.nextLine();
+                            Aluno alunoInserir = new Aluno(matricula, nome);
+                            turma2.cadastrar(alunoInserir);
+                            break;
+                    case 2: 
+                            turma2.listar();
+                            break;
+                    case 3:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+                            turma2.alterarMediaFinal(matricula);
+                        break;
+                    case 4:
+                            System.out.println("Digite a matrícula: ");
+                            matricula = in.nextLine();
+                            turma2.alterarFaltas(matricula);
+                        break;
+                    case 5:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+        
+                            turma2.exibirAluno(matricula);
+                        break;
+                    case 6:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+                            turma2.removerAluno(matricula);
+                        break;
+                    case 0: System.out.println("Boa noite!!!");
+                            break;
+                    default: System.out.println("Opção inválida!!");
+    
+                }
+                        break;
+                    
+                case 3:
+                menuOpcoes();
+                chaveMenu = in.nextInt(); in.nextLine();
+                switch(chaveMenu) {
+                    case 1:
+                            System.out.println("Digite o nome do aluno: ");
+                            String nome = in.next(); in.nextLine();
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.next(); in.nextLine();
+                            Aluno alunoInserir = new Aluno(matricula, nome);
+                            turma3.cadastrar(alunoInserir);
+                            break;
+                    case 2: 
+                            turma3.listar();
+                            break;
+                    case 3:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+        
+                            turma3.alterarMediaFinal(matricula);
+                        break;
+                    case 4:
+                            System.out.println("Digite a matrícula: ");
+                            matricula = in.nextLine();
+        
+                            turma3.alterarFaltas(matricula);
+                        break;
+                    case 5:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+        
+                            turma3.exibirAluno(matricula);
+                        break;
+                    case 6:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+        
+                            turma3.removerAluno(matricula);
+                        break;
+    
+                    case 0: System.out.println("Boa noite!!!");
+                            break;
+                    default: System.out.println("Opção inválida!!");
+    
+                }
+    
 
-            if (escolhaTurma == 1) {
-                turmaEscolhida = turma1;
-            } else if (escolhaTurma == 2) {
-                turmaEscolhida = turma2;
-            } else if (escolhaTurma == 3) {
-                turmaEscolhida = turma3;
-            } else if (escolhaTurma == 4) {
-                turmaEscolhida = turma4;
-            }
+                        break;
+                
+                case 4:
+                menuOpcoes();
+                chaveMenu = in.nextInt(); in.nextLine();
+                switch(chaveMenu) {
+                    case 1:
+                            System.out.println("Digite o nome do aluno: ");
+                            String nome = in.next(); in.nextLine();
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.next(); in.nextLine();
+                            Aluno alunoInserir = new Aluno(matricula, nome);
+                            turma4.cadastrar(alunoInserir);
+                            break;
+                    case 2: 
+                            turma4.listar();
+                            break;
+                    case 3:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+        
+                            turma4.alterarMediaFinal(matricula);
+                        break;
+                    case 4:
+                            System.out.println("Digite a matrícula: ");
+                            matricula = in.nextLine();
+        
+                            turma4.alterarFaltas(matricula);
+                        break;
+                    case 5:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+                            turma4.exibirAluno(matricula);
+                        break;
+                    case 6:
+                            System.out.println("Digite a matrícula do aluno: ");
+                            matricula = in.nextLine();
+        
+                            turma4.removerAluno(matricula);
+                        break;
+    
+                    case 0: System.out.println("Boa noite!!!");
+                            break;
+                    default: System.out.println("Opção inválida!!");
+    
+                }
+    
 
-            menu();
-            escolhaOpcao = in.nextInt(); in.nextLine();
-           
-            
-            if (escolhaOpcao == 1) {
-                System.out.println("Digite o nome do aluno: ");
-                String nome = in.nextLine();
-                System.out.println("Digite a matrícula do aluno: ");
-                String matricula = in.nextLine();
+                        break;
+                case 0: System.out.println("Boa noite!!!");
+                        break;
+                default: System.out.println("Opção inválida!!");
 
-                Aluno alunoInserir = new Aluno(matricula, nome);
-                turmaEscolhida.cadastrar(alunoInserir);
-            } else if (escolhaOpcao == 2) {
-                turmaEscolhida.listar();
-            } else if (escolhaOpcao == 3) {
-                System.out.println("Digite a matrícula do aluno: ");
-                String matricula = in.nextLine();
-
-                turmaEscolhida.alterarMediaFinal(matricula);
-            } else if (escolhaOpcao == 4) {
-                System.out.println("Digite a matrícula: ");
-                String matricula = in.nextLine();
-
-                turmaEscolhida.alterarFaltas(matricula);
-            } else if (escolhaOpcao == 5) {
-                System.out.println("Digite a matrícula do aluno: ");
-                String matricula = in.nextLine();
-
-                turmaEscolhida.exibirAluno(matricula);
-            } else if (escolhaOpcao == 6) {
-                System.out.println("Digite a matrícula do aluno: ");
-                String matricula = in.nextLine();
-
-                turmaEscolhida.removerAluno(matricula);
-            }
-
-        } while (escolhaTurma != 0);
+        }
+     } while (chaveMenu != 0);
+    
 
     }
 
     public static void exibirOpcoes() {
-        System.out.println("******Bem vindo(a) a cardeneta das turmas de Maria******");
-        
+        System.out.println("********Bem vindo à cardeneta de Maria********");
+        System.out.println("Escolha uma turma!!");
         System.out.println("1 -  Operações da turma 1");
         System.out.println("2 -  Operações da turma 2");
         System.out.println("3 -  Operações da turma 3");
         System.out.println("4 -  Operações da turma 4");
+        System.out.println("0 -  Bye byeee!!!!!");
+        System.out.print("opção: ");
     }
 
-    public static void menu(){
+
+    public static void menuOpcoes(){
         System.out.println("1 - Inserir aluno");
         System.out.println("2 - Listar turma");
         System.out.println("3 - Alterar a média final de um aluno");
         System.out.println("4 - Alterar a quantidade de faltas de um aluno");
         System.out.println("5 - Exibir dados de aluno");
         System.out.println("6 - Remover aluno cadastrado");
+        System.out.println("0 -  Bye byeee!!!!!");
+        System.out.print("opção: ");
     }
 
 }
